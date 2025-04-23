@@ -1,10 +1,12 @@
 const SET_IS_LOADING = "SET_IS_LOADING";
 const ADD_PRODUCT_TO_BASKET = "ADD_PRODUCT_TO_BASKET";
 const SET_PRODUCT_LIST = "SET_PRODUCT_LIST";
+const SET_FILTERED_LIST = "SET_FILTERED_LIST";
 
 export const APP_ACTIONS = {
   SET_IS_LOADING: SET_IS_LOADING,
   SET_PRODUCT_LIST: SET_PRODUCT_LIST,
+  SET_FILTERED_LIST: SET_FILTERED_LIST,
 };
 
 //LOADING
@@ -41,4 +43,16 @@ export const setProductList = ({ state, productList }) => {
 };
 export const setProductListAction = ({ dispatch, productList }) => {
   dispatch({ type: SET_PRODUCT_LIST, payload: productList });
+};
+
+//SET FILTEREDLIST
+export const setFilteredList = ({ state, productList }) => {
+  let newState = { ...state };
+
+  newState.filteredList = productList;
+
+  return newState;
+};
+export const setFilteredListAction = ({ dispatch, productList }) => {
+  dispatch({ type: SET_FILTERED_LIST, payload: productList });
 };

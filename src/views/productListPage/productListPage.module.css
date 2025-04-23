@@ -1,0 +1,22 @@
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.bodyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: end;
+  gap: 20px;
+}
+
+.itemListContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  grid-gap: 5vw;
+}

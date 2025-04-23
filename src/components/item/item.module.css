@@ -1,0 +1,17 @@
+.detailsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+.itemBrand {
+  font-weight: bold;
+}
+.itemModel {
+  font-style: italic;
+}

@@ -1,0 +1,9 @@
+.searchContainer {
+  display: flex;
+  position: relative;
+}
+
+.searchInput {
+  border-radius: 10px;
+  padding: 2px;
+}

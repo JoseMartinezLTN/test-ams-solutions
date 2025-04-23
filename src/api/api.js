@@ -8,7 +8,7 @@ export const getProductListCall = async () => {
   };
 
   return fetch(url, requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((result) => result)
     .catch((error) => error);
 };
@@ -23,7 +23,7 @@ export const getProductCall = async ({ productId }) => {
   };
 
   return fetch(url, requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((result) => result)
     .catch((error) => error);
 };
@@ -46,7 +46,7 @@ export const addProductToBasketCall = async ({
   };
 
   return fetch(url, requestOptions)
-    .then((response) => response.text())
+    .then((response) => response.json())
     .then((result) => result)
     .catch((error) => error);
 };
