@@ -13,7 +13,10 @@ const ProductListPage = () => {
     <div className={styles.mainContainer}>
       <Header />
       <div className={styles.bodyContainer}>
-        <Search />
+        <div style={{ marginLeft: "auto" }}>
+          <Search />
+        </div>
+
         <div className={styles.itemListContainer}>
           {appState.filteredList.map((product, index) => {
             return <Item key={index} product={product} />;

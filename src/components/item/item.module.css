@@ -5,13 +5,20 @@
 .itemContainer {
   display: flex;
   flex-direction: column;
-  border: solid 1px gray;
+  outline: solid 1px var(--grey);
   border-radius: 10px;
   padding: 5px;
+  cursor: pointer;
 }
+
+.itemContainer:hover {
+  outline: solid 2px var(--green);
+}
+
 .itemBrand {
   font-weight: bold;
 }
+
 .itemModel {
   font-style: italic;
 }
