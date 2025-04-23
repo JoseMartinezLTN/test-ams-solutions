@@ -33,7 +33,7 @@ const AppContent = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<ProductListPage />} />
-        <Route exact path="/:productId" element={<ProductDetailsPage />} />
+        <Route exact path="/detail" element={<ProductDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

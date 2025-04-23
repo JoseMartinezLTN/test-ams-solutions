@@ -2,4 +2,6 @@
   --grey: gray;
   --green: rgb(129, 233, 60);
   --blue: rgb(134, 162, 213);
+  --white: white;
+  --transparent: rgba(255, 255, 255, 0);
 }

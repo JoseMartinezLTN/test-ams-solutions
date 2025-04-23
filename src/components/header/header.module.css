@@ -3,4 +3,30 @@
   background-color: var(--blue);
   height: 100px;
   margin-bottom: 5px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.antTrailContainer {
+  padding: 15px;
+  display: flex;
+}
+
+.basketContainer {
+  padding: 15px;
+}
+
+.unSelectedAnt {
+  cursor: pointer;
+}
+
+.unSelectedAnt:hover {
+  text-decoration: underline var(--white);
+}
+
+.selectedAnt {
+  font-weight: bold;
+  cursor: default !important;
 }

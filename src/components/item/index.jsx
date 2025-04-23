@@ -2,11 +2,20 @@ import React, { useContext } from "react";
 import { appDispatchContext } from "../../App";
 import Image from "../image";
 import styles from "./item.module.css";
+import { setSelectedIdAction } from "../../reducer/controller";
+import { useNavigate } from "react-router-dom";
 
 const Item = ({ product }) => {
   const dispatch = useContext(appDispatchContext);
+  const navigate = useNavigate();
 
-  const onClickItem = () => {};
+  const onClickItem = () => {
+    navigate("/detail");
+    setSelectedIdAction({
+      dispatch: dispatch,
+      id: product.id,
+    });
+  };
   return (
     <div onClick={onClickItem} className={styles.itemContainer}>
       <Image url={product.imgUrl} />
