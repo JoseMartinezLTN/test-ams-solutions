@@ -35,10 +35,7 @@ const Header = () => {
           >{`>>${selectedProduct.brand} ${selectedProduct.model}`}</div>
         )}
       </div>
-      <div className={styles.basketContainer}>
-        <div></div>
-        <div></div>
-      </div>
+      <div className={styles.basketContainer}>Cesta: {appState.basket}</div>
     </div>
   );
 };

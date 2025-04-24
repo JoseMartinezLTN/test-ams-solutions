@@ -8,5 +8,5 @@
   padding: var(--XS);
   border: solid var(--XXS) var(--grey);
   margin: var(--XS);
-  font-size: medium;
+  font-size: var(--L);
 }

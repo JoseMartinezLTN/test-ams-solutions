@@ -29,6 +29,7 @@ const ProductDetailsPage = () => {
   const addProductToBasket = () => {
     addToBasket({
       product: selectedProduct,
+      dispatch: dispatch,
     });
   };
 

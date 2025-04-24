@@ -28,7 +28,7 @@ export const appReducer = (state, action) => {
     case SET_IS_LOADING:
       return setIsLoading({ state: state, isLoading: payload });
     case ADD_PRODUCT_TO_BASKET:
-      return addProductToBasket({ state: state, product: payload });
+      return addProductToBasket({ state: state, number: payload });
     case SET_PRODUCT_LIST:
       return setProductList({ state: state, productList: payload });
     case SET_FILTERED_LIST:

@@ -5,14 +5,13 @@
 .itemContainer {
   display: flex;
   flex-direction: column;
-  outline: solid var(--XXS) var(--grey);
-  border-radius: var(--M);
   padding: var(--S);
   cursor: pointer;
+  border-bottom: solid var(--XS) var(--white);
 }
 
 .itemContainer:hover {
-  outline: solid var(--XS) var(--green);
+  border-bottom: solid var(--XS) var(--grey);
 }
 
 .itemBrand {
