@@ -17,7 +17,7 @@ const {
 
 export const initialAppReducer = {
   isLoading: false,
-  basket: { productList: [] },
+  basket: 0,
   productList: [],
   filteredList: [],
 };

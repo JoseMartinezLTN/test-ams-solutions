@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductListPage from "./views/productListPage";
 import ProductDetailsPage from "./views/productDetailsPage";
 import { appReducer, initialAppReducer } from "./reducer/reducer";
-import { getProductList } from "./appController";
+import { getProductList, isTimestampOlderThan1Hour } from "./appController";
+import { addProductToBasketAction } from "./reducer/controller";
 
 export const appDispatchContext = createContext();
 export const appStateContext = createContext();
@@ -26,7 +27,12 @@ const AppContent = () => {
   const dispatch = useContext(appDispatchContext);
 
   useEffect(() => {
-    getProductList({ dispatch: dispatch });
+    const basketFromStorage = JSON.parse(localStorage.getItem("basket"));
+    if (!isTimestampOlderThan1Hour(basketFromStorage?.timestamp))
+      addProductToBasketAction({
+        dispatch: dispatch,
+        number: basketFromStorage.value,
+      });
   }, []);
 
   return (

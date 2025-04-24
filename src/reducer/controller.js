@@ -24,15 +24,15 @@ export const setIsLoadingAction = ({ dispatch, isLoading }) => {
 };
 
 //ADD ITEM TO BASKET
-export const addProductToBasket = ({ state, product }) => {
+export const addProductToBasket = ({ state, number }) => {
   let newState = { ...state };
 
-  newState.basket.productList.push(product);
+  newState.basket = number;
 
   return newState;
 };
-export const addProductToBasketAction = ({ dispatch, product }) => {
-  dispatch({ type: ADD_PRODUCT_TO_BASKET, payload: product });
+export const addProductToBasketAction = ({ dispatch, number }) => {
+  dispatch({ type: ADD_PRODUCT_TO_BASKET, payload: number });
 };
 
 //SET PRODUCTLIST

@@ -1,6 +1,6 @@
 export const getProductListCall = async () => {
   const myHeaders = new Headers();
-  const url = "https://itx-frontend-test.onrender.com/api/product";
+  const url = "/api/product";
   const requestOptions = {
     method: "GET",
     headers: myHeaders,
@@ -15,7 +15,7 @@ export const getProductListCall = async () => {
 
 export const getProductCall = async ({ productId }) => {
   const myHeaders = new Headers();
-  const url = `https://itx-frontend-test.onrender.com/api/product/${productId}`;
+  const url = `/api/product/${productId}`;
   const requestOptions = {
     method: "GET",
     headers: myHeaders,
@@ -34,7 +34,8 @@ export const addProductToBasketCall = async ({
   storageCode,
 }) => {
   const myHeaders = new Headers();
-  const url = "https://itx-frontend-test.onrender.com/api/cart";
+  myHeaders.append("Content-Type", "application/json");
+  const url = "/api/cart";
   const requestOptions = {
     method: "POST",
     headers: myHeaders,

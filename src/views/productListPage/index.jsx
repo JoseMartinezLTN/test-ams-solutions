@@ -5,11 +5,16 @@ import { appDispatchContext, appStateContext } from "../../App";
 import Item from "../../components/item";
 import styles from "./productListPage.module.css";
 import { useNavigate } from "react-router-dom";
+import { getProductList } from "../../appController";
 
 const ProductListPage = () => {
   const appState = useContext(appStateContext);
   const dispatch = useContext(appDispatchContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getProductList({ dispatch: dispatch });
+  }, []);
 
   useEffect(() => {
     appState.selectedId && navigate("/detail");
@@ -24,7 +29,7 @@ const ProductListPage = () => {
         </div>
 
         <div className={styles.itemListContainer}>
-          {appState.filteredList.map((product, index) => {
+          {appState.filteredList?.map((product, index) => {
             return <Item key={index} product={product} />;
           })}
         </div>
