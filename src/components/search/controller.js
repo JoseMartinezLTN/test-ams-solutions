@@ -4,8 +4,7 @@ export const filterProductList = ({ productList, dispatch, search = "" }) => {
   const filteredList = productList.filter(
     (product) =>
       product.brand.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-      product.model.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
-      product.price.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+      product.model.toLocaleLowerCase().includes(search.toLocaleLowerCase())
   );
 
   setFilteredListAction({

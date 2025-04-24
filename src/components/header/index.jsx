@@ -27,7 +27,7 @@ const Header = () => {
             selectedProduct ? styles.unSelectedAnt : styles.selectedAnt
           }
         >
-          {"Lista"}
+          {"Lista de móviles"}
         </div>
         {selectedProduct && (
           <div
