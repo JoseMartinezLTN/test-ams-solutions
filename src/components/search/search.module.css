@@ -4,9 +4,9 @@
 }
 
 .searchInput {
-  border-radius: 10px;
-  padding: 2px;
-  border: solid 1px var(--grey);
-  margin: 2px;
+  border-radius: var(--M);
+  padding: var(--XS);
+  border: solid var(--XXS) var(--grey);
+  margin: var(--XS);
   font-size: medium;
 }

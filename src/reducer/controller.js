@@ -40,6 +40,7 @@ export const setProductList = ({ state, productList }) => {
   let newState = { ...state };
 
   newState.productList = productList;
+  newState.filteredList = productList;
 
   return newState;
 };

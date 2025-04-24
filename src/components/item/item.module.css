@@ -5,14 +5,14 @@
 .itemContainer {
   display: flex;
   flex-direction: column;
-  outline: solid 1px var(--grey);
-  border-radius: 10px;
-  padding: 5px;
+  outline: solid var(--XXS) var(--grey);
+  border-radius: var(--M);
+  padding: var(--S);
   cursor: pointer;
 }
 
 .itemContainer:hover {
-  outline: solid 2px var(--green);
+  outline: solid var(--XS) var(--green);
 }
 
 .itemBrand {

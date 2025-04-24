@@ -1,7 +1,15 @@
 :root {
   --grey: gray;
+  --lightGrey: rgb(234, 234, 234);
   --green: rgb(129, 233, 60);
   --blue: rgb(134, 162, 213);
   --white: white;
   --transparent: rgba(255, 255, 255, 0);
+
+  --XXS: 1px;
+  --XS: 2px;
+  --S: 4px;
+  --M: 8px;
+  --L: 16px;
+  --XL: 32px;
 }

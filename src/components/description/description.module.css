@@ -1,0 +1,9 @@
+.descriptionContainer {
+  display: flex;
+  gap: var(--S);
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--lightGrey);
+  border-radius: var(--M);
+  padding: var(--S);
+}

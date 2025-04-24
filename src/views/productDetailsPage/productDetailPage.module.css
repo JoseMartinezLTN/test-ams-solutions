@@ -1,0 +1,21 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.productDetailContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imageContainer {
+  width: 30vw;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--M);
+}

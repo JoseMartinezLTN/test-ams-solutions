@@ -2,7 +2,7 @@
   width: 100%;
   background-color: var(--blue);
   height: 100px;
-  margin-bottom: 5px;
+  margin-bottom: var(--S);
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -10,12 +10,12 @@
 }
 
 .antTrailContainer {
-  padding: 15px;
+  padding: var(--L);
   display: flex;
 }
 
 .basketContainer {
-  padding: 15px;
+  padding: var(--L);
 }
 
 .unSelectedAnt {

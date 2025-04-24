@@ -10,7 +10,6 @@ const Item = ({ product }) => {
   const navigate = useNavigate();
 
   const onClickItem = () => {
-    navigate("/detail");
     setSelectedIdAction({
       dispatch: dispatch,
       id: product.id,

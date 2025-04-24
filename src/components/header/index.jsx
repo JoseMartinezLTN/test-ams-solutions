@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const appState = useContext(appStateContext);
   const dispatch = useContext(appDispatchContext);
-  const navigate = useNavigate();
 
   const selectedProduct = appState.productList.find(
     (product) => product.id === appState.selectedId
@@ -15,7 +14,6 @@ const Header = () => {
 
   const onClick = () => {
     if (selectedProduct) {
-      navigate("/");
       setSelectedIdAction({ dispatch: dispatch });
     }
   };
@@ -32,7 +30,9 @@ const Header = () => {
           {"Lista"}
         </div>
         {selectedProduct && (
-          <div className={styles.selectedAnt}>{`>>${selectedProduct.id}`}</div>
+          <div
+            className={styles.selectedAnt}
+          >{`>>${selectedProduct.brand} ${selectedProduct.model}`}</div>
         )}
       </div>
       <div className={styles.basketContainer}>

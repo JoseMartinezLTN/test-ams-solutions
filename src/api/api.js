@@ -50,3 +50,22 @@ export const addProductToBasketCall = async ({
     .then((result) => result)
     .catch((error) => error);
 };
+
+export const middleManCall = async ({ callFunction, props }) => {
+  let response = await callFunction(props);
+
+  if (response?.error) {
+    let error = {
+      isHandledError: false,
+      message: "Fallo de conexión",
+    };
+
+    if (!error.isHandledError) {
+      alert(error.message);
+      window.location.replace("/");
+    }
+    return error;
+  } else {
+    return response;
+  }
+};
