@@ -25,3 +25,11 @@
   background-color: var(--grey);
   color: var(--white);
 }
+
+.disabledButtonContainer {
+  background-color: var(--lightGrey);
+  cursor: default;
+  color: var(--grey);
+  padding: var(--XS);
+  text-align: center;
+}

@@ -26,11 +26,11 @@ export const getProduct = async ({ selectedId, setProduct }) => {
     product = productFromStorage.value;
   }
 
-  setProduct({
-    ...product,
-    selectedColor: product.options?.colors?.[0],
-    selectedStorage: product.options?.storages?.[0],
-  });
+  if (product.options?.colors?.length == 1)
+    product.selectedColor = product.options.colors[0];
+  if (product.options?.storages?.length == 1)
+    product.selectedStorage = product.options.storages[0];
+  setProduct(product);
 };
 
 export const addToBasket = async ({ product, dispatch }) => {

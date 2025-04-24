@@ -4,20 +4,24 @@ import styles from "./actions.module.css";
 const Actions = ({ product, setProduct, addToBasket }) => {
   const onChangeStorage = (value) => {
     const selectedStorage = product.options.storages.find(
-      (storage) => storage.code === value
+      (storage) => storage.code == value
     );
     setProduct({ ...product, selectedStorage: selectedStorage });
   };
 
   const onChangeColor = (value) => {
     const selectedColor = product.options.colors.find(
-      (color) => color.code === value
+      (color) => color.code == value
     );
     setProduct({ ...product, selectedColor: selectedColor });
   };
 
+  const isAllDataSelected = () => {
+    return product.selectedColor && product.selectedStorage;
+  };
+
   const onClick = () => {
-    addToBasket();
+    if (isAllDataSelected()) addToBasket();
   };
 
   return (
@@ -26,6 +30,9 @@ const Actions = ({ product, setProduct, addToBasket }) => {
         className={styles.selectInput}
         onChange={(event) => onChangeStorage(event.target.value)}
       >
+        <option selected={!product.selectedStorage} value={undefined}>
+          --
+        </option>
         {product.options?.storages?.map((storage) => {
           return (
             <option
@@ -41,6 +48,9 @@ const Actions = ({ product, setProduct, addToBasket }) => {
         className={styles.selectInput}
         onChange={(event) => onChangeColor(event.target.value)}
       >
+        <option selected={!product.selectedColor} value={undefined}>
+          --
+        </option>
         {product.options?.colors?.map((color) => {
           return (
             <option
@@ -52,7 +62,14 @@ const Actions = ({ product, setProduct, addToBasket }) => {
           );
         })}
       </select>
-      <div className={styles.buttonContainer} onClick={onClick}>
+      <div
+        className={
+          isAllDataSelected()
+            ? styles.buttonContainer
+            : styles.disabledButtonContainer
+        }
+        onClick={onClick}
+      >
         Añadir al carro
       </div>
     </div>
