@@ -6,10 +6,11 @@
 .productDetailContainer {
   display: flex;
   justify-content: space-evenly;
+  padding: var(--L);
 }
 
 .imageContainer {
-  width: 30vw;
+  align-self: center;
 }
 
 .descriptionContainer {
@@ -17,5 +18,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--M);
+  gap: var(--L);
 }

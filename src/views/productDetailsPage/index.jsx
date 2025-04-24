@@ -6,7 +6,7 @@ import Image from "../../components/image";
 import { appDispatchContext, appStateContext } from "../../App";
 import styles from "./productDetailPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { getProduct } from "./controller";
+import { addToBasket, getProduct } from "./controller";
 
 const ProductDetailsPage = () => {
   const appState = useContext(appStateContext);
@@ -26,6 +26,12 @@ const ProductDetailsPage = () => {
     !appState.selectedId && navigate("/");
   }, [appState.selectedId]);
 
+  const addProductToBasket = () => {
+    addToBasket({
+      product: selectedProduct,
+    });
+  };
+
   return (
     <div className={styles.pageContainer}>
       <Header />
@@ -36,7 +42,11 @@ const ProductDetailsPage = () => {
         {selectedProduct && (
           <div className={styles.descriptionContainer}>
             <Description product={selectedProduct} />
-            <Actions />
+            <Actions
+              product={selectedProduct}
+              setProduct={setSelectedProduct}
+              addToBasket={addProductToBasket}
+            />
           </div>
         )}
       </div>

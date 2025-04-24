@@ -6,4 +6,10 @@
   background-color: var(--lightGrey);
   border-radius: var(--M);
   padding: var(--S);
+  width: 100%;
+}
+.descriptionLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
